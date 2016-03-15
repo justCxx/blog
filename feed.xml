@@ -4,10 +4,10 @@
     <title>Опавшие листья</title>
     <description>О программировании, науке и не только.
 </description>
-    <link>https://justcxx.github.io/blog2//</link>
-    <atom:link href="https://justcxx.github.io/blog2//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 15 Mar 2016 23:47:20 +0300</pubDate>
-    <lastBuildDate>Tue, 15 Mar 2016 23:47:20 +0300</lastBuildDate>
+    <link>https://justcxx.github.io/blog/</link>
+    <atom:link href="https://justcxx.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 16 Mar 2016 00:10:36 +0300</pubDate>
+    <lastBuildDate>Wed, 16 Mar 2016 00:10:36 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -15,7 +15,7 @@
         <description>&lt;p&gt;Какой угол составляют часовая и минутная стрелка в 3 часа 15 минут?
 Давайте взглянем на часы:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog2//assets/article_images/2016-03-08-clock-angle-problem/clock_even_hours.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/article_images/2016-03-08-clock-angle-problem/clock_even_hours.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Циферблат представляет собой окружность, разделенную часовыми делениями на &lt;script type=&quot;math/tex&quot;&gt;12&lt;/script&gt; частей и на &lt;script type=&quot;math/tex&quot;&gt;60&lt;/script&gt; частей - минутными. Полный оборот стрелки (минутной или часовой) от начальной оси (вертикальной линии проходящей через центр циферблата, &lt;script type=&quot;math/tex&quot;&gt;6&lt;/script&gt; и &lt;script type=&quot;math/tex&quot;&gt;12&lt;/script&gt; часов) составляет угол в &lt;script type=&quot;math/tex&quot;&gt;360^\circ&lt;/script&gt;. Один час составляет &lt;script type=&quot;math/tex&quot;&gt;\dfrac {1} {12}&lt;/script&gt; часть окружности, т.е. &lt;script type=&quot;math/tex&quot;&gt;\dfrac {360^\circ} {12} = 30^\circ&lt;/script&gt;, а одна минута - &lt;script type=&quot;math/tex&quot;&gt;\dfrac {1} {60}&lt;/script&gt; часть, т.е. &lt;script type=&quot;math/tex&quot;&gt;\dfrac {360^\circ} {60} = 6^\circ&lt;/script&gt;&lt;/p&gt;
 
@@ -25,7 +25,7 @@
 
 &lt;p&gt;Теперь давайте понаблюдаем за движением минутной стрелки от трёх часов ровно до пятнадцати минут четвертого:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/blog2//assets/article_images/2016-03-08-clock-angle-problem/clock_15-00-to-15-15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/blog/assets/article_images/2016-03-08-clock-angle-problem/clock_15-00-to-15-15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;В начальный момент (&lt;script type=&quot;math/tex&quot;&gt;3:00&lt;/script&gt;) угол между стрелками составляет &lt;script type=&quot;math/tex&quot;&gt;90^\circ&lt;/script&gt;, за пять минут минутная стрелка отклонится на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 5 = 30^\circ&lt;/script&gt; от начального положения, за &lt;script type=&quot;math/tex&quot;&gt;10&lt;/script&gt; минут - на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 10 = 60^\circ&lt;/script&gt;, а за &lt;script type=&quot;math/tex&quot;&gt;15&lt;/script&gt; минут - на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 15 = 90^\circ&lt;/script&gt;.&lt;/p&gt;
 
@@ -42,8 +42,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 +0300</pubDate>
-        <link>https://justcxx.github.io/blog2//problems/2016/03/08/clock-angle-problem.html</link>
-        <guid isPermaLink="true">https://justcxx.github.io/blog2//problems/2016/03/08/clock-angle-problem.html</guid>
+        <link>https://justcxx.github.io/blog/problems/2016/03/08/clock-angle-problem.html</link>
+        <guid isPermaLink="true">https://justcxx.github.io/blog/problems/2016/03/08/clock-angle-problem.html</guid>
         
         <category>problems</category>
         
@@ -71,8 +71,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 +0300</pubDate>
-        <link>https://justcxx.github.io/blog2//books/2016/03/08/books-2015.html</link>
-        <guid isPermaLink="true">https://justcxx.github.io/blog2//books/2016/03/08/books-2015.html</guid>
+        <link>https://justcxx.github.io/blog/books/2016/03/08/books-2015.html</link>
+        <guid isPermaLink="true">https://justcxx.github.io/blog/books/2016/03/08/books-2015.html</guid>
         
         <category>books</category>
         
