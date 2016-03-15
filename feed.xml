@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Опавшие листья</title>
+    <description>О программировании, науке и не только.
+</description>
+    <link>https://justcxx.github.io/</link>
+    <atom:link href="https://justcxx.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Tue, 15 Mar 2016 23:43:46 +0300</pubDate>
+    <lastBuildDate>Tue, 15 Mar 2016 23:43:46 +0300</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Угол между стрелками часов</title>
+        <description>&lt;p&gt;Какой угол составляют часовая и минутная стрелка в 3 часа 15 минут?
+Давайте взглянем на часы:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2016-03-08-clock-angle-problem/clock_even_hours.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Циферблат представляет собой окружность, разделенную часовыми делениями на &lt;script type=&quot;math/tex&quot;&gt;12&lt;/script&gt; частей и на &lt;script type=&quot;math/tex&quot;&gt;60&lt;/script&gt; частей - минутными. Полный оборот стрелки (минутной или часовой) от начальной оси (вертикальной линии проходящей через центр циферблата, &lt;script type=&quot;math/tex&quot;&gt;6&lt;/script&gt; и &lt;script type=&quot;math/tex&quot;&gt;12&lt;/script&gt; часов) составляет угол в &lt;script type=&quot;math/tex&quot;&gt;360^\circ&lt;/script&gt;. Один час составляет &lt;script type=&quot;math/tex&quot;&gt;\dfrac {1} {12}&lt;/script&gt; часть окружности, т.е. &lt;script type=&quot;math/tex&quot;&gt;\dfrac {360^\circ} {12} = 30^\circ&lt;/script&gt;, а одна минута - &lt;script type=&quot;math/tex&quot;&gt;\dfrac {1} {60}&lt;/script&gt; часть, т.е. &lt;script type=&quot;math/tex&quot;&gt;\dfrac {360^\circ} {60} = 6^\circ&lt;/script&gt;&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;Таким образом, угол между часовой и минутной стрелкой в &lt;script type=&quot;math/tex&quot;&gt;0&lt;/script&gt; минут каждого часа (&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt;) равен &lt;script type=&quot;math/tex&quot;&gt;30^\circ * h&lt;/script&gt;. Для трех часов (&lt;script type=&quot;math/tex&quot;&gt;h = 3&lt;/script&gt;) на рисунке выше, видим, что это равно &lt;script type=&quot;math/tex&quot;&gt;30 * 3 = 90^\circ&lt;/script&gt;, а для шести часов - &lt;script type=&quot;math/tex&quot;&gt;30 * 6 = 180^\circ&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Теперь давайте понаблюдаем за движением минутной стрелки от трёх часов ровно до пятнадцати минут четвертого:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/article_images/2016-03-08-clock-angle-problem/clock_15-00-to-15-15.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;В начальный момент (&lt;script type=&quot;math/tex&quot;&gt;3:00&lt;/script&gt;) угол между стрелками составляет &lt;script type=&quot;math/tex&quot;&gt;90^\circ&lt;/script&gt;, за пять минут минутная стрелка отклонится на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 5 = 30^\circ&lt;/script&gt; от начального положения, за &lt;script type=&quot;math/tex&quot;&gt;10&lt;/script&gt; минут - на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 10 = 60^\circ&lt;/script&gt;, а за &lt;script type=&quot;math/tex&quot;&gt;15&lt;/script&gt; минут - на &lt;script type=&quot;math/tex&quot;&gt;6^\circ * 15 = 90^\circ&lt;/script&gt;.&lt;/p&gt;
+
+&lt;p&gt;Должна ли в этот момент (&lt;script type=&quot;math/tex&quot;&gt;3:15&lt;/script&gt;) минутная стрелка совпасть с часовой? Нет, потому что движение минутной стрелки также влияет и на часовую стрелку. Пятнадцать минут пройденные минутной стрелкой, являются четвертью часа, и часовая стрелка также пройдет эту четверть часа: &lt;script type=&quot;math/tex&quot;&gt;\dfrac {30^\circ} {4} = 7.5^\circ&lt;/script&gt;. Таким образом, угол между часовой и минутной стрелкой в &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; часа и &lt;script type=&quot;math/tex&quot;&gt;15&lt;/script&gt; минут будет составлять разницу между углом составленным часовой стрелкой с начальной осью и углом составленным минутной стрелкой с начальной осью: &lt;script type=&quot;math/tex&quot;&gt;90^\circ + 7.5^\circ - 90^\circ = 7.5^\circ&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;В общем виде, можно записать формулу так:&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\alpha = 30^\circ * h + 0.5 * m - 6^\circ * m&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; - угол между часовой и минутной стрелкой&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;h&lt;/script&gt; - часы&lt;/li&gt;
+  &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;m&lt;/script&gt; - минуты&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 +0300</pubDate>
+        <link>https://justcxx.github.io/problems/2016/03/08/clock-angle-problem.html</link>
+        <guid isPermaLink="true">https://justcxx.github.io/problems/2016/03/08/clock-angle-problem.html</guid>
+        
+        <category>problems</category>
+        
+        
+        <category>problems</category>
+        
+      </item>
+    
+      <item>
+        <title>Книги 2015</title>
+        <description>&lt;p&gt;Прочитанное в 2015 году:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Swaroop C.H. A byte of Python. v2.01. - Пер. с анг.: Vladimir Smolyar, 2013. - 151 c. [PDF]&lt;/li&gt;
+  &lt;li&gt;Мартин Фаулер. Рефакторинг: улучшение существующего кода. - Пер. с англ. - СПб: Символ Плюс, 2003. - 432 с., ил [PDF]&lt;/li&gt;
+  &lt;li&gt;Роберт К.Мартин. Идеальный программист. Как стать профессионалом разработки ПО. - СПб.: Питер, 2012. - 224 с.: ил. [PDF]&lt;/li&gt;
+  &lt;li&gt;Роберт К.Мартин. Чистый код. Создание, анализ и рефакторинг. Библиотека программиста. - СПб.: Питер, 2010. - 464 с.: ил. [PDF]&lt;/li&gt;
+  &lt;li&gt;Эрик Эванс. Предметно-ориентированное проектирование (DDD): структуризация сложных программных систем. - Пер. с англ. М.: ООО “И.Д. Вильямс”, 2011. - 448 с.: ил. [PDF]&lt;/li&gt;
+  &lt;li&gt;Чарльз Петцольд. Код. - М.: “Издательско-торговый дом Русская Редакция”, 2001. - 512 с.: ил. [PDF]&lt;/li&gt;
+  &lt;li&gt;Харольд Абельсон, Джеральд Джей Сассман. Структура и Интерпретация Компьютерных Программ. - Добросвет, 2006. - 608 с.: ил. [PDF]&lt;/li&gt;
+  &lt;li&gt;Хэл Фултон, Андре Арко. Путь Ruby. - ДМК Пресс 2015. - 664 с.&lt;/li&gt;
+  &lt;li&gt;Элия М. Гольдратт, Джеф Кокс. Цель. Процесс непрерывного совершенствования. [PDF]&lt;/li&gt;
+  &lt;li&gt;Джин Ким, Кевин Бер, Джордж Спаффорд. Проект “Феникс”. Роман о том, как DevOps меняет бизнес к лучшему. - Эксмоб 2015. - 384 с.&lt;/li&gt;
+  &lt;li&gt;Ричард Фейнман. Вы, конечно, шутите, мистер Фейнман! [EPUB]&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 00:00:00 +0300</pubDate>
+        <link>https://justcxx.github.io/books/2016/03/08/books-2015.html</link>
+        <guid isPermaLink="true">https://justcxx.github.io/books/2016/03/08/books-2015.html</guid>
+        
+        <category>books</category>
+        
+        
+        <category>books</category>
+        
+      </item>
+    
+  </channel>
+</rss>
