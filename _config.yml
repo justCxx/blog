@@ -1,45 +1,35 @@
-# Build settings
-gems:
-  - jemoji
-  - jekyll-paginate
+title: "Опавшие листья"
+description: >
+  О программировании, науке и не только.
 
-# Site settings
-title: "Mediator"
-description: > # this means to ignore newlines until "email:"
-   A Jekyll theme - Medium inspired
-
-email: a-mail@mail.mail
-#blog logo
-logo: "/assets/images/df_logo.jpg"
-# blog cover
-cover: "/assets/images/cA4aKEIPQrerBnp1yGHv_IMG_9534-3-2.jpg"
-
-name: 'Dirk Fabisch'
-author: 'Dirk Fabisch'
+email: re.vkolesnikov@gmail.com
+name: 'Василий Колесников'
+author: 'Василий Колесников'
 author_image: "/assets/images/author.jpg"
+
+url: 'https://justcxx.github.io'
+# baseurl: "/blog"
+
+# logo: "/assets/images/df_logo.jpg"
+cover: "/assets/images/cover.jpg"
 
 paginate:	5
 
-url: "http://myblog.***.***" # the base hostname & protocol for your site
-baseurl: ""
-#used to display twitter cards
-twitter_handle: '@dirkfabisch'
+twitter_handle: '@re_vkolesnikov'
+disqus: 'fallenleavesblog'
 
-#fill in disqus shortname to use disqus
-#disqus: disqus-shortname
-
-# social icons and sharing options
 social:
-  - icon:	twitter
-    url:	https://twitter.com/dirkfabisch
+  - icon: twitter
+    url: https://twitter.com/re_vkolesnikov
     desc: Follow me on twitter
     share_url: http://twitter.com/share
     share_title: ?text=
     share_link: "&amp;url="
 
-  - icon:	github
-    url:	https://github.com/dirkfabisch
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
+  - icon: github
+    url: https://github.com/justcxx
+    desc: Fork me on github
+
+gems:
+  - jemoji
+  - jekyll-paginate
