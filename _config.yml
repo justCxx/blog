@@ -8,7 +8,7 @@ author: 'Василий Колесников'
 author_image: "/assets/images/author.jpg"
 
 url: 'https://justcxx.github.io'
-# baseurl: "/blog"
+baseurl: "/blog"
 
 # logo: "/assets/images/df_logo.jpg"
 cover: "/assets/images/cover.jpg"
