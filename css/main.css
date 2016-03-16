@@ -524,6 +524,7 @@ body {
     color: #333;
     text-decoration: underline; }
   .post .post-content img {
+    display: block;
     max-width: 100%;
     margin: 0 auto; }
   .post .post-content figure {
