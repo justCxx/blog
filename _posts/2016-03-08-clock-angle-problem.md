@@ -1,8 +1,9 @@
 ---
 title:  "Угол между стрелками часов"
 date:   2016-03-08
-categories: [problems]
-tags: [problems]
+categories: problems
+tags: problems
+mathjax: true
 layout: post
 ---
 

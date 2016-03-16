@@ -116,5 +116,8 @@
       </div>
     </div>
     {% include javascripts.html %}
+    {% if page.mathjax %}
+    {% include mathjax.html %}
+    {% endif %}
   </body>
 </html>
