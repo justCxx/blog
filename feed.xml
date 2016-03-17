@@ -6,8 +6,8 @@
 </description>
     <link>https://justcxx.github.io/blog/</link>
     <atom:link href="https://justcxx.github.io/blog/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 17 Mar 2016 02:40:54 +0300</pubDate>
-    <lastBuildDate>Thu, 17 Mar 2016 02:40:54 +0300</lastBuildDate>
+    <pubDate>Thu, 17 Mar 2016 03:07:18 +0300</pubDate>
+    <lastBuildDate>Thu, 17 Mar 2016 03:07:18 +0300</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -18,17 +18,15 @@
 
 </description>
         <pubDate>Wed, 16 Mar 2016 00:00:00 +0300</pubDate>
-        <link>https://justcxx.github.io/blog/books,/problems/2016/03/16/how-would-you-move-mount-fuji.html</link>
-        <guid isPermaLink="true">https://justcxx.github.io/blog/books,/problems/2016/03/16/how-would-you-move-mount-fuji.html</guid>
+        <link>https://justcxx.github.io/blog/books/2016/03/16/how-would-you-move-mount-fuji.html</link>
+        <guid isPermaLink="true">https://justcxx.github.io/blog/books/2016/03/16/how-would-you-move-mount-fuji.html</guid>
         
         <category>books,</category>
         
         <category>problems</category>
         
         
-        <category>books,</category>
-        
-        <category>problems</category>
+        <category>books</category>
         
       </item>
     
@@ -53,9 +51,7 @@
 
 &lt;p&gt;Должна ли в этот момент (&lt;script type=&quot;math/tex&quot;&gt;3:15&lt;/script&gt;) минутная стрелка совпасть с часовой? Нет, потому что движение минутной стрелки также влияет и на часовую стрелку. Пятнадцать минут пройденные минутной стрелкой, являются четвертью часа, и часовая стрелка также пройдет эту четверть часа: &lt;script type=&quot;math/tex&quot;&gt;\dfrac {30^\circ} {4} = 7.5^\circ&lt;/script&gt;. Таким образом, угол между часовой и минутной стрелкой в &lt;script type=&quot;math/tex&quot;&gt;3&lt;/script&gt; часа и &lt;script type=&quot;math/tex&quot;&gt;15&lt;/script&gt; минут будет составлять разницу между углом составленным часовой стрелкой с начальной осью и углом составленным минутной стрелкой с начальной осью: &lt;script type=&quot;math/tex&quot;&gt;90^\circ + 7.5^\circ - 90^\circ = 7.5^\circ&lt;/script&gt;&lt;/p&gt;
 
-&lt;p&gt;В общем виде, можно записать формулу так:&lt;/p&gt;
-
-&lt;script type=&quot;math/tex; mode=display&quot;&gt;\alpha = 30^\circ * h + 0.5 * m - 6^\circ * m&lt;/script&gt;
+&lt;p&gt;В общем виде, можно записать формулу так: &lt;script type=&quot;math/tex&quot;&gt;\alpha = 30^\circ * h + 0.5 * m - 6^\circ * m&lt;/script&gt;&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;script type=&quot;math/tex&quot;&gt;\alpha&lt;/script&gt; - угол между часовой и минутной стрелкой&lt;/li&gt;
@@ -79,17 +75,19 @@
         <description>&lt;p&gt;Прочитанное в 2015 году:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Swaroop C.H. A byte of Python. v2.01. - Пер. с анг.: Vladimir Smolyar, 2013. - 151 c. [PDF]&lt;/li&gt;
-  &lt;li&gt;Мартин Фаулер. Рефакторинг: улучшение существующего кода. - Пер. с англ. - СПб: Символ Плюс, 2003. - 432 с., ил [PDF]&lt;/li&gt;
-  &lt;li&gt;Роберт К.Мартин. Идеальный программист. Как стать профессионалом разработки ПО. - СПб.: Питер, 2012. - 224 с.: ил. [PDF]&lt;/li&gt;
-  &lt;li&gt;Роберт К.Мартин. Чистый код. Создание, анализ и рефакторинг. Библиотека программиста. - СПб.: Питер, 2010. - 464 с.: ил. [PDF]&lt;/li&gt;
-  &lt;li&gt;Эрик Эванс. Предметно-ориентированное проектирование (DDD): структуризация сложных программных систем. - Пер. с англ. М.: ООО “И.Д. Вильямс”, 2011. - 448 с.: ил. [PDF]&lt;/li&gt;
-  &lt;li&gt;Чарльз Петцольд. Код. - М.: “Издательско-торговый дом Русская Редакция”, 2001. - 512 с.: ил. [PDF]&lt;/li&gt;
-  &lt;li&gt;Харольд Абельсон, Джеральд Джей Сассман. Структура и Интерпретация Компьютерных Программ. - Добросвет, 2006. - 608 с.: ил. [PDF]&lt;/li&gt;
-  &lt;li&gt;Хэл Фултон, Андре Арко. Путь Ruby. - ДМК Пресс 2015. - 664 с.&lt;/li&gt;
-  &lt;li&gt;Элия М. Гольдратт, Джеф Кокс. Цель. Процесс непрерывного совершенствования. [PDF]&lt;/li&gt;
-  &lt;li&gt;Джин Ким, Кевин Бер, Джордж Спаффорд. Проект “Феникс”. Роман о том, как DevOps меняет бизнес к лучшему. - Эксмоб 2015. - 384 с.&lt;/li&gt;
-  &lt;li&gt;Ричард Фейнман. Вы, конечно, шутите, мистер Фейнман! [EPUB]&lt;/li&gt;
+  &lt;li&gt;Роберт К.Мартин. Идеальный программист. Как стать профессионалом разработки ПО&lt;/li&gt;
+  &lt;li&gt;Роберт К.Мартин. Чистый код. Создание, анализ и рефакторинг. Библиотека программиста&lt;/li&gt;
+  &lt;li&gt;Джоэл Спольски. Джоэл о программировании&lt;/li&gt;
+  &lt;li&gt;Джоэл Спольски. Джоэл. И снова о программировании&lt;/li&gt;
+  &lt;li&gt;Эрик Эванс. Предметно-ориентированное проектирование (DDD): структуризация сложных программных систем&lt;/li&gt;
+  &lt;li&gt;Мартин Фаулер. Рефакторинг: улучшение существующего кода&lt;/li&gt;
+  &lt;li&gt;Чарльз Петцольд. Код&lt;/li&gt;
+  &lt;li&gt;Харольд Абельсон, Джеральд Джей Сассман. Структура и Интерпретация Компьютерных Программ&lt;/li&gt;
+  &lt;li&gt;Хэл Фултон, Андре Арко. Путь Ruby&lt;/li&gt;
+  &lt;li&gt;Элия М. Гольдратт, Джеф Кокс. Цель. Процесс непрерывного совершенствования&lt;/li&gt;
+  &lt;li&gt;Джин Ким, Кевин Бер, Джордж Спаффорд. Проект “Феникс”. Роман о том, как DevOps меняет бизнес к лучшему&lt;/li&gt;
+  &lt;li&gt;Ричард Фейнман. Вы, конечно, шутите, мистер Фейнман!&lt;/li&gt;
+  &lt;li&gt;Swaroop C.H. A byte of Python. v2.01.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 00:00:00 +0300</pubDate>
