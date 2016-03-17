@@ -1,7 +1,7 @@
 ---
 title:  "Как сдвинуть гору Фудзи?"
 date:   2016-03-16
-categories: books, problems
+categories: books
 tags: books, problems
 image:  /blog/assets/article_images/2016-03-16-how-would-you-move-mount-fuji/fudzi-volna-lodki-risunok_1920x1200.jpg
 image2: /blog/assets/article_images/2016-03-16-how-would-you-move-mount-fuji/fudzi-volna-lodki-risunok_640x480.jpg
