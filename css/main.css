@@ -279,6 +279,7 @@ body {
         .content article .post-title a:hover {
           text-decoration: none; }
     .content article .post-excerpt {
+      text-align: justify;
       letter-spacing: -0.02em;
       font-weight: 300;
       font-style: normal;
