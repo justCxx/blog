@@ -17,6 +17,7 @@ paginate:	5
 
 twitter_handle: '@re_vkolesnikov'
 disqus: 'fallenleavesblog'
+google_analytics: UA-74873357-1
 
 social:
   - icon: twitter
