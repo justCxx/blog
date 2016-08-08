@@ -7,7 +7,7 @@ name: 'Василий Колесников'
 author: 'Василий Колесников'
 author_image: "/assets/images/author.jpg"
 
-url: 'https://justcxx.github.io'
+url: 'https://v-kolesnikov.github.io'
 baseurl: "/blog"
 
 logo: "/assets/images/logo.jpg"
@@ -28,7 +28,7 @@ social:
     share_link: "&amp;url="
 
   - icon: github
-    url: https://github.com/justcxx
+    url: https://github.com/v-kolesnikov
     desc: Fork me on github
 
 gems:
