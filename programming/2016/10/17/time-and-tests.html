@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- (1) force latest IE rendering engine: bit.ly/1c8EiC9 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Время и тесты</title>
+  <meta name="description" content="Работая над одним большим и старым проектом, однажды ночью я отправил в репозиторий коммит, и уже собираясь закончить работу зашел посмотреть статус коммита на CI-сервере. Коммит был небольшой, и н..." />
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@re_vkolesnikov" />
+    <meta name="twitter:title" content="Время и тесты" />
+    <meta name="twitter:image" content="https://v-kolesnikov.github.io/blog/assets/images/logo.jpg" />
+    
+    <meta name="twitter:description"  content="Работая над одним большим и старым проектом, однажды ночью я отправил в репозиторий коммит, и уже собираясь закончить работу зашел посмотреть статус коммита на CI-сервере. Коммит был небольшой, и н..." />
+    
+  
+
+  <meta property="og:site_name" content="Опавшие листья" />
+  <meta property="og:title" content="Время и тесты"/>
+  
+  <meta property="og:description" content="Работая над одним большим и старым проектом, однажды ночью я отправил в репозиторий коммит, и уже собираясь закончить работу зашел посмотреть статус коммита на CI-сервере. Коммит был небольшой, и н..." />
+  
+  <meta property="og:image" content="https://v-kolesnikov.github.io/blog/assets/images/logo.jpg" />
+  <meta property="og:url" content="https://v-kolesnikov.github.io/blog/programming/2016/10/17/time-and-tests.html" >
+  <meta property="og:type" content="blog" />
+  <meta property="article:published_time" content="2016-10-17T00:00:00+03:00">
+
+  <link rel="canonical" href="https://v-kolesnikov.github.io/blog/programming/2016/10/17/time-and-tests.html"/>
+  <link rel="shortcut icon" href="/blog/assets/images/favicon.png" type="image/png"/>
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="/blog/css/main.css" />
+  <link rel="stylesheet" type="text/css" media="print" href="/blog/css/print.css" />
+</head>
+
+  <body itemscope itemtype="http://schema.org/Article">
+    <!-- header start -->
+
+<a href="https://v-kolesnikov.github.io/blog" class="logo-readium">
+    <span class="logo" style="background-image: url(/blog/assets/images/logo.jpg)"></span>
+</a>
+
+<!-- header end -->
+
+    <main class="content" role="main">
+      <article class="post">
+        
+        <div class="noarticleimage">
+          <div class="post-meta">
+            <h1 class="post-title">Время и тесты</h1>
+            <div class="cf post-meta-text">
+              <div class="author-image" style="background-image: url(/blog/assets/images/author.jpg)">Blog Logo</div>
+              <h4 class="author-name" itemprop="author" itemscope itemtype="http://schema.org/Person"></h4>
+              on
+              <time datetime="2016-10-17T00:00:00+03:00">17 Oct 2016</time>
+              <!-- , tagged on <span class="post-tag-">, <a href="/tag/"></a></span> -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        
+        <section class="post-content">
+          <div class="post-reading">
+            <span class="post-reading-time"></span> read
+          </div>
+          <a name="topofpage"></a>
+          <p>Работая над одним большим и старым проектом, однажды ночью я отправил в репозиторий коммит, и уже собираясь закончить работу зашел посмотреть статус коммита на CI-сервере. Коммит был небольшой, и на первый взгляд просто не мог ничего сломать. Но большим был проект, а количество нарушенных в нём архитектурных принципов было столь велико, что надеяться на удачу не приходилось. Тесты шли около 10 минут, и… Не прошли! Интересно. Упавшие тесты относились к подсистеме биллинга, и содержали утверждения относительно дат окончания оплаченных тарифов. Я не работал с этой частью системы раньше (и позже тоже), и не знал её особенностей - пытаться разобраться в исходниках казалось плохой идеей. Переключился на мастер и запустил тесты биллинга - не прошли. Закралась мысль об особенностях конфигурации локальной машины и её отличиях от production и testing окружений. Зашел на тестовый сервер и вручную запустил сборку мастер ветки. Последняя дневная сборка была успешной. 5, 7, 10 минут, не прошли! Сборка упала на тех же самых тестах, при этом этот же код успешно проходил все тесты днём ранее. Выглядело всё это странно и ничего не оставалось, кроме как погрузиться в детальное изучение возникавшей во время теста ошибки. Ошибка гласила что ожидаема дата отличается от актуального значения на 1 день. Где даты и время - там проблемы работы с часовыми поясами. Утром коллеги с улыбкой поведали о том, что эти тесты <em>всегда падают ночью</em> и что об этом не стоит беспокоится. Действительно, перезапустив ту же самую сборку, которую я запустил ночью, я убедился в том что все тесты прошли успешно.</p>
+
+<p>В чём же ошибка?</p>
+
+<p><img src="/blog/assets/article_images/2016-10-17-time-and-tests/time_assert.png" alt="" /></p>
+
+<p>Представьте себе что у вас есть временная метка - запись о дате и времени чего-либо. Например истечения срока действия пробного периода вашего продукта. Дата может быть записана так (формат ISO 8601): <code>2016-10-17T01:30:00+03:00</code>. Данная запись содержит в себе информацию о часовом поясе - <code>+03:00</code>, т.е. половина второго ночи будет в часовом поясе +03. Тоже самое время по Гринвичу будет: <code>2016-10-16T22:30:00+00:00</code> - вчерашнее относительно исходного времени, но - то же самое. В связи с этим нужно быть аккуратным при извлечении даты из временной метки, как видно - в данном случае они могут быть разными, в зависимости от того в каком формате представлена временная метка.</p>
+
+<p>Почему я вспомнил об этом эпизоде сейчас? Потому что встретил его очередном проекте в том же самом виде, что говорит о системности подобной ошибки.</p>
+
+<p>Пишите тесты и <em>спокойной</em> вам ночи!)</p>
+
+<p><img src="/blog/assets/article_images/2016-10-17-time-and-tests/IMG_20161017_011737.jpg" alt="" /></p>
+
+
+        </section>
+        <footer class="post-footer">
+          <section class="share">
+            
+              
+                <a class="icon-twitter" href="http://twitter.com/share?text=%D0%92%D1%80%D0%B5%D0%BC%D1%8F+%D0%B8+%D1%82%D0%B5%D1%81%D1%82%D1%8B&amp;url=https://v-kolesnikov.github.io/programming/2016/10/17/time-and-tests"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=255');return false;">
+                <i class="fa fa-twitter"></i><span class="hidden">twitter</span>
+                </a>
+              
+            
+              
+            
+          </section>
+        </footer>
+        <div class="bottom-teaser cf">
+          <div class="isLeft">
+            <h5 class="index-headline featured"><span>Written by</span></h5>
+            <section class="author">
+              <div class="author-image" style="background-image: url(/blog/assets/images/author.jpg)">Blog Logo</div>
+              <h4>Василий Колесников</h4>
+              <p class="bio"></p>
+              <hr>
+              <p class="published">Published <time datetime="2016-10-17 00:00">17 Oct 2016</time></p>
+            </section>
+          </div>
+          
+          <div class="isRight">
+            <h5 class="index-headline featured"><span>Supported by</span></h5>
+            <footer class="site-footer">
+              <section class="poweredby">Proudly published with <a href="http://jekyllrb.com"> Jekyll</a></section>
+              <a class="subscribe" href="/blog/feed.xml"> <span class="tooltip"> <i class="fa fa-rss"></i> You should subscribe to my feed.</span></a>
+              <div class="inner">
+                <section class="copyright">All content copyright <a href="/">Василий Колесников</a> &copy; 2016<br>All rights reserved.</section>
+              </div>
+            </footer>
+          </div>
+        </div>
+        
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'fallenleavesblog'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        
+      </article>
+    </main>
+    <div class="bottom-closer">
+      <div class="background-closer-image"  style="background-image: url(/blog/assets/images/cover.jpg)">
+        Image
+      </div>
+      <div class="inner">
+        <h1 class="blog-title">Опавшие листья</h1>
+        <h2 class="blog-description">О программировании, науке и не только.
+</h2>
+        <a href="/blog/" class="btn">Back to Overview</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/blog/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/blog/assets/js/index.js"></script>
+<script type="text/javascript" src="/blog/assets/js/readingTime.min.js"></script>
+<script>
+(function ($) {
+  "use strict";
+  $(document).ready(function(){
+
+    var $window = $(window),
+    $image = $('.post-image-image, .teaserimage-image');
+
+      $window.on('scroll', function() {
+        var top = $window.scrollTop();
+
+        if (top < 0 || top > 1500) { return; }
+        $image
+          .css('transform', 'translate3d(0px, '+top/3+'px, 0px)')
+          .css('opacity', 1-Math.max(top/700, 0));
+      });
+      $window.trigger('scroll');
+
+      var height = $('.article-image').height();
+      $('.post-content').css('padding-top', height + 'px');
+
+      $('a[href*=#]:not([href=#])').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+          if (target.length) {
+            $('html,body').animate({ scrollTop: target.offset().top }, 500);
+            return false;
+          }
+        }
+      });
+
+  });
+}(jQuery));
+</script>
+
+<script>
+    (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-74873357-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+    
+  </body>
+</html>
