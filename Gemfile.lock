@@ -91,6 +91,9 @@ GEM
       gemoji (~> 2.0)
       html-pipeline (~> 1.9)
       jekyll (>= 2.0)
+    jgd (1.7.1)
+      jekyll (>= 1.5.1)
+      trollop (= 2.1.2)
     json (1.8.3)
     kramdown (1.5.0)
     liquid (2.6.2)
@@ -126,6 +129,7 @@ GEM
       hitimes
     toml (0.1.2)
       parslet (~> 1.5.0)
+    trollop (2.1.2)
     typhoeus (0.7.3)
       ethon (>= 0.7.4)
     tzinfo (1.2.2)
@@ -139,6 +143,7 @@ DEPENDENCIES
   bourbon
   github-pages
   jemoji
+  jgd
 
 BUNDLED WITH
-   1.10.6
+   1.13.1
